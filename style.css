@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+    /* -- Colors -- */
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --fSize: 15px;
+    --fLeague: "League Spartan", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fLeague);
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+body .pattern-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+body .pattern-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+body main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body main .text-rated {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+body main .text-rated .text-page {
+    width: 35%;
+}
+body main .text-rated .text-page h1 {
+    font-size: 52px;
+    color: var(--veryDarkMagenta);
+}
+body main .text-rated .text-page p {
+    font-weight: 500;
+    color: var(--darkGrayishMagenta);
+    padding: 20px 0px 0 0;
+    text-align: start;
+    font-size: 17px;
+    line-height: 27px;
+}
+body main .text-rated .rated-page {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+body main .text-rated .rated-page .rated {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    padding: 15px 10px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: var(--lightGrayishMagenta);
+    position: relative;
+}
+body main .text-rated .rated-page .rated:nth-child(2) {
+    left: 40px;
+}
+body main .text-rated .rated-page .rated:nth-child(3) {
+    left: 75px;
+}
+body main .text-rated .rated-page .rated p {
+    font-weight: 700;
+    color: var(--veryDarkMagenta);
+}
+
+body main .opinions-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+body main .opinions-page .card-opinion {
+    background-color: var(--veryDarkMagenta);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    height: 250px;
+    width: 400px;
+    position: relative;
+}
+body main .opinions-page .card-opinion:nth-child(2) {
+    margin: 0 35px;
+    top: 15px;
+}
+body main .opinions-page .card-opinion:nth-child(3) {
+    top: 30px;
+}
+body main .opinions-page .card-opinion .profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+body main .opinions-page .card-opinion .profile img {
+    height: 40px;
+    border-radius: 50%;
+}
+body main .opinions-page .card-opinion .profile .fullname-buyer {
+    padding: 0 20px;
+}
+body main .opinions-page .card-opinion .profile .fullname-buyer h2 {
+    font-weight: 500;
+    font-size: 17px;
+}
+body main .opinions-page .card-opinion .profile .fullname-buyer p {
+    font-size: 15px;
+    padding: 5px 0;
+    color: var(--softPink);
+}
+
+body main .opinions-page .card-opinion > p {
+    padding-top: 30px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+@media (max-width: 375px) {
+    body main {
+        top: 85%;
+        width: 340px;
+    }
+    body main .text-rated {
+        /* background-color: red; */
+        flex-direction: column;
+    }
+    body main .text-rated .text-page,
+    body main .text-rated .rated-page {
+        width: 100%;
+    }
+    body main .text-rated .text-page h1 {
+        font-size: 40px;
+    }
+    body main .text-rated .text-page p {
+        padding: 0 8px;
+    }
+    body main .text-rated .text-page h1,
+    body main .text-rated .text-page p {
+        text-align: center;
+    }
+    body main .text-rated .rated-page .rated {
+        flex-direction: column;
+        left: 0 !important;
+        width: 100%;
+    }
+    body main .text-rated .rated-page .rated p {
+        padding-top: 15px;
+    }
+    body main .opinions-page {
+        flex-direction: column;
+    }
+    body main .opinions-page .card-opinion {
+        width: 100%;
+    }
+}
